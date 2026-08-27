@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: java-ai-learning
+  main:
+    allow-bean-definition-overriding: true
+
+  # Spring AI Configuration
+  ai:
+    openai:
+      api-key: ${GROQ_API_KEY:key_your}
+      base-url: https://api.groq.com/openai
+      chat:
+        options:
+          model: openai/gpt-oss-120b
+          temperature: 0.7
+
+# LangChain4j Configuration
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${GROQ_API_KEY:key_your}
+      base-url: https://api.groq.com/openai/v1
+      model-name: openai/gpt-oss-120b
+      temperature: 0.7
+      log-requests: true
+      log-responses: true
+
+  ollama:
+    chat-model:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      model-name: llama3
+      temperature: 0.7
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.learning.ai: DEBUG
+    org.springframework.ai: DEBUG
+    dev.langchain4j: DEBUG
