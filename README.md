@@ -1,9 +1,3 @@
-# 🚀 Phase 1: Java AI Learning Masterclass
-
-Welcome to **Phase 1** of your Java AI journey! This repository is designed specifically for Senior Java Developers and Tech Leads to master AI integrations using **100% Java** with **Spring Boot 3**, **Spring AI**, and **LangChain4j**.
-
----
-
 ## 🏗️ Project Architecture & Concepts Covered
 
 ```
